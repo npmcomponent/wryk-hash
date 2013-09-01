@@ -1,0 +1,16 @@
+{
+  "name": "hash",
+  "repo": "wryk/hash",
+  "description": "",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "wryk/properties": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
