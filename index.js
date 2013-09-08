@@ -58,11 +58,11 @@ Hash.prototype.values = function () {
 	return new HashIterator(this, 'value');
 };
 
-Hash.prototype.entries= Hash.prototype.__iterator__ = function () {
+Hash.prototype.entries = Hash.prototype.__iterator__ = function () {
 	return new HashIterator(this, 'key+value');
 };
 
-Hash.prototype.iterator  = function (kind) {
+Hash.prototype.iterator = function (kind) {
 	return new HashIterator(this, kind);
 };
 
