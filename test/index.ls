@@ -1,7 +1,5 @@
-require! {
-	Hash: '../build/hash'
-	should
-}
+should = require 'chai' .should!
+Hash = require '../build/'
 
 describe "new Hash(object)" (...) !->
 	h = new Hash do
