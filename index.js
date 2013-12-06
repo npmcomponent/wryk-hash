@@ -4,7 +4,7 @@ module.exports = Hash;
  * @class Hash
  * @constructor
  * @param {Object} object
- * @param {Hash}
+ * @return {Hash}
 **/
 function Hash (object) {
 	this._entries = {};
@@ -48,7 +48,7 @@ Hash.prototype.delete = function (key) {
 };
 
 /**
- * boolean for entry existence
+ * entry existence
  * @method has
  * @param {String} key
  * @return {Boolean}
@@ -180,7 +180,7 @@ function HashIterator (hash, kind) {
  * iterate over key/value/entry
  * @method next
  * @param {String} key
- * @return {Boolean}
+ * @return {any}
 **/
 HashIterator.prototype.next = function () {
 	var key = this._keys[this._index] !== undefined ? this._keys[this._index] : null;

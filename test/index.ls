@@ -1,7 +1,7 @@
 should = require 'chai' .should!
 Hash = require '../build/'
 
-describe "new Hash(object)" (...) !->
+describe 'new Hash(object)' (...) !->
 	h = new Hash do
 		'a': 'aa'
 		'b': 'bb'
@@ -10,18 +10,17 @@ describe "new Hash(object)" (...) !->
 		h.get 'a' .should.be.equal 'aa'
 		h.get 'b' .should.be.equal 'bb'
 
-	describe ".get(key)" (...) !->
+	describe '#get(key)' (...) !->
 		it "should return the key value or undefined" !->
 			h.get 'a' .should.be.equal 'aa'
 			should.not.exist h.get 'z'
 
-	describe ".set(key)" (...) !->
+	describe '#set(key)' (...) !->
 		it "should set a new key/value entry or override existing entry" !->
 			h.set 'c' 'cc'
 			h.get 'c' .should.be.equal 'cc'
 
-
-	describe ".delete(key)" (...) !->
+	describe '#delete(key)' (...) !->
 		it "should remove a new key/value entry" !->
 			should.exist h.get 'c'
 			h.delete 'c'
@@ -35,27 +34,25 @@ describe "new Hash(object)" (...) !->
 			h.delete 'c' .should.be.false
 
 
-	describe ".has(key)" (...) !->
+	describe '#has(key)' (...) !->
 		it "should return true if key/value entry is defined" !->
 			h.has 'a' .should.be.true
 
 		it "should return false if key/value entry is not defined" !->
 			h.has 'z' .should.be.false
 
-
-	describe ".clear()" (...) !->
+	describe '#clear()' (...) !->
 		it "should delete all key/value entries" !->
 			h.clear!
 			h.size.should.be.equal 0
 
-
-	describe ".size" (...) !->
+	describe '#size' (...) !->
 		it "should return the number of entries" !->
 			h.size.should.be.equal 0
 			h.set 'a' 'aa'
 			h.size.should.be.equal 1
 
-	describe ".forEach(callback [, context])" (...) !->
+	describe '#forEach(callback [, context])' (...) !->
 		it "should call callback for all entries with (value, key, hash)" !->
 			h.set 'b' 'bb'
 			h.set 'c' 'cc'
@@ -74,14 +71,14 @@ describe "new Hash(object)" (...) !->
 				!-> @should.be.equal context
 				context
 
-	describe ".keys()" (...) !->
+	describe '#keys()' (...) !->
 		it "should return a hash keys iterator" !->
 			iterator = h.keys!
 
 			while (key = iterator.next!) != null
 				h.has key .should.be.true
 
-	describe ".values()" (...) !->
+	describe '#values()' (...) !->
 		it "should return a hash values iterator" !->
 			iterator = h.values!
 
@@ -90,10 +87,9 @@ describe "new Hash(object)" (...) !->
 
 				h.forEach !-> found := true if it == value
 
-				found.should.be.true
-				
+				found.should.be.true	
 
-	describe ".entries()" (...) !->
+	describe '#entries()' (...) !->
 		it "should return a hash entries iterator" !->
 			iterator = h.entries!
 
