@@ -1,9 +1,13 @@
 {
   "name": "hash",
   "repo": "wryk/hash",
-  "description": "",
-  "version": "0.1.0",
-  "keywords": [],
+  "description": "es6 like Map object without object as key feature",
+  "version": "0.2.0",
+  "keywords": [
+    "hash",
+    "es6",
+    "map"
+  ],
   "dependencies": {},
   "development": {},
   "license": "MIT",
