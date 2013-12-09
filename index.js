@@ -4,7 +4,6 @@ module.exports = Hash;
  * @class Hash
  * @constructor
  * @param {Object} object
- * @return {Hash}
 **/
 function Hash (object) {
 	this._entries = {};
@@ -30,11 +29,15 @@ Hash.prototype.get = function (key) {
 /**
  * set entry value associated with `key`
  * @method set
+ * @chainable
  * @param {String} key
  * @param {any} value
+ * @return {Hash}
 **/
 Hash.prototype.set = function (key, value) {
 	this._entries[key] = value;
+	
+	return this;
 };
 
 /**
