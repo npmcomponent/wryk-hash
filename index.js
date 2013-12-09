@@ -32,7 +32,7 @@ Hash.prototype.get = function (key) {
  * @chainable
  * @param {String} key
  * @param {any} value
- * @return {hash}
+ * @return {Hash}
 **/
 Hash.prototype.set = function (key, value) {
 	this._entries[key] = value;
