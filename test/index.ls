@@ -20,6 +20,9 @@ describe 'new Hash(object)' (...) !->
 			h.set 'c' 'cc'
 			h.get 'c' .should.be.equal 'cc'
 
+		it "should return this" !->
+			h.set 'd' 'dd' .should.be.equal h
+
 	describe '#delete(key)' (...) !->
 		it "should remove a new key/value entry" !->
 			should.exist h.get 'c'
