@@ -1,6 +1,6 @@
 # Hash
 
-a es6 like Map object without object as key feature (perf improvement)
+Map object without es6 object as key feature (perf improvement)
 
 
 ## Installation
